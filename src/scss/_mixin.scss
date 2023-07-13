@@ -1,0 +1,108 @@
+//Media Queries
+@mixin respond_to($media){
+  @if $media==mob{
+    @media only screen and (max-width:$media_mob){@content;}
+  }
+  @else if $media==tab{
+    @media only screen and (max-width:$media_tab){@content;}
+  }
+  @else if $media==mid_pc{
+    @media only screen and (max-width:$media_mid_pc){@content;}
+  }
+  @else if $media==pc{
+    @media only screen and (min-width:$media_pc){@content;}
+  }
+}
+
+///////////add img
+@mixin bg_img($url_pc:false,$url_tab:false,$url_mob:false){
+  @if $url_pc{
+    background-image:url($url_pc);
+  }
+  @if $url_tab{
+    background-image:url($url_tab);
+  }
+  @if $url_mob{
+    background-image:url($url_mob);
+  }
+}
+
+@mixin img_opt(){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+}
+
+
+
+///////////btn
+@mixin opacity_button(){
+ /* &:hover{
+    -webkit-box-shadow: 0 0 17px -3px rgba(255,255,255,0.45);
+    box-shadow: 0 0 17px -3px rgba(255,255,255,0.45);
+  }*/
+  &:active{
+    opacity:0.5;
+  }
+}
+
+@mixin button_bg($bg_txt,$border_color:false,$bg_color:false /*,$max_width:false */ ){
+  color:$bg_txt;
+  @if $border_color{
+    border: solid 2px $border_color;
+  }
+  @if $bg_color{
+    background-color:$bg_color;
+  }@else{
+    background:none;
+  }
+  @include opacity_button();
+}
+
+///////////svg
+@mixin box_ico($img,$width:false,$height:false){
+  background-image:url($img);
+  background-size:cover;
+  @if $width and $height{
+    width:$width;
+    height:$height;
+  }
+}
+
+///////////ios
+
+@mixin ios($img,$number){
+  @media (-webkit-min-device-pixel-ratio: $number),(min-resolution: 192dpi) {
+    @include bg_img($img,false,false);
+  }
+}
+@mixin for_ios(){
+  @supports (-webkit-touch-callout: none) {
+    @content;
+  }
+}
+
+
+///////////IE
+@mixin ie(){
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin img($name,$format){
+  @include ios($name+"@2x."+$format,"2");
+  @include bg_img($name+".webp",false,false);
+  @include ie(){
+    @include bg_img($name+"."+$format,false,false);
+  }
+
+}
+
+
+////////icon size
+@mixin md-icon-size($size) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+}

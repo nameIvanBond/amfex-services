@@ -1,0 +1,67 @@
+
+
+<div id="video_box" #videoCtrl (window:resize)="resizeFunction($event)" >
+
+
+    <div id="loader"></div>
+    <video id="video" width="100%" height="auto" [autoplay]="true" [muted]="true" >
+      <source src="/assets/video_main.mp4" type="video/mp4" />
+      <source src="/assets/video_main.webm" type="video/webm" />
+    </video>
+    <button class="skip_video" (click)="skip()" >Skip</button>
+
+</div>
+
+
+<section class="top_section6  top_bg6" [style.height.px]="nav.clientHeight">
+  <div class="contentCenter">
+    <div class="sec_block">
+
+      <div class="sec_block_indent m_width780">
+        <h1 class="sec_block_indent_h color_black">About Us</h1>
+      </div>
+      <div class="sec_block_sep m_width720"></div>
+      <p class="sec_block_txt m_width720 color_black">
+        Emirates Wealth is owned, managed and operated by a group of industry’s professionals with decades of experience within the financial industry. We are a team of professional united through the desire to change the way investment funds are distributed and delivered to retail and professional investors.
+      </p>
+      <p class="sec_block_txt m_width720 color_black">
+        Emirates Wealth is registered and regulated to offer funds products and services in three different jurisdictions; UAE, EU and Australia. Our strong global presence allows us to meet the needs and requirements of fund providers, no matter where your funds are currently domiciled.
+      </p>
+      <p class="sec_block_txt m_width720 color_black">
+        Our mission is to provide a complete fund solution package where we will drive your business forward and increase your AuM. We pride ourselves in being a leading registrant, promoter and distributor of funds and we deliver our services with the unique combination of professional breadth, vast expertise and innovative technology process.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="company_section1 " fxLayout="row wrap" fxLayoutAlign="center center" >
+  <div fxFlex="100">
+    <div class="contentCenter" >
+      <div class=" homeBox3_size" >
+        <div class="white_screen_box3"></div>
+        <div class="git_box " >
+          <div class="git_box_lr " >
+            <div class="contact_section " id="contactUs">
+
+              <h3 class="contact_section_h">Emirates Wealth values each and every client and our support team will be delighted to answer any questions.</h3>
+
+              <p class="contact_section_txt">Address: 1406 Opal Tower Burj Khalifa Blvd, Business Bay P.O. Box 454925 Dubai – UAE.</p>
+              <p class="contact_section_txt">Phone: +971 4 871 3600 </p>
+              <p class="contact_section_txt">Email: <a href="mailto:info@emirateswealth.com" style="text-decoration:underline;">info@emirateswealth.com</a></p>
+
+
+              <div class="contact_section_box">
+                <div class="contactUs"    >
+                  <app-feedback-form class="black_form m_t_mob_s"></app-feedback-form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

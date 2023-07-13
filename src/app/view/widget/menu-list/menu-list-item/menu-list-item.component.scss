@@ -1,0 +1,27 @@
+
+//@import 'src/scss/themes/light-theme';
+//@import "src/scss/mixin";
+//@import "src/scss/variables";
+
+.mat-list-item {
+  padding: 8px 0;
+  //@include respond_to(tab){
+  //  width:auto;
+  //}
+  .routeIcon {
+    margin-right: 40px;
+  }
+}
+
+
+.arrow {
+  width:auto;
+  margin-right: -15px;
+}
+
+
+
+.my-light-theme mat-nav-list app-menu-list-item .mat-list-item.mat-focus-indicator:hover{
+  background-color: red !important;
+}
+

@@ -1,0 +1,38 @@
+<span *ngIf="url.length === 0; then thenBlock else elseBlock" ></span>
+
+<ng-template #thenBlock >
+
+  <div class="mat-list-item mat-focus-indicator" [ngStyle]="{'padding-left': (depth * 12) + 'px'}" [routerLink]="url.length ? url : null" [fragment]="item.anchor" (click)="onItemSelected(item)" [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}">
+
+    <div class="mat-list-item-content">{{item.displayName}}
+      <div class="arrow" *ngIf="!item.children && item.route ? router.isActive(item.route, true): false">
+        <div class="point"></div>
+      </div>
+      <span fxFlex *ngIf="item.children && item.children.length">
+        <span fxFlex></span>
+        <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">expand_more</mat-icon>
+      </span>
+    </div>
+  </div>
+  <span *ngIf="expanded">
+    <app-menu-list-item *ngFor="let child of item.children" [item]="child" [parentPath]="parentPath" [depth]="depth+1">  </app-menu-list-item>
+  </span>
+
+</ng-template>
+<ng-template #elseBlock>
+  <a mat-list-item routerLink="{{item.route}}" [fragment]="item.anchor" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="onItemSelected(item)" [ngClass]="{'expanded': expanded}" [ngStyle]="{'padding-left': (depth * 12) + 'px'}">
+
+    {{item.displayName}}<span fxFlex></span>
+    <div class="arrow" *ngIf="!item.children && item.route ? router.isActive(item.route, true): false">
+      <div class="point"></div>
+    </div>
+    <span fxFlex *ngIf="item.children && item.children.length">
+      <span fxFlex></span>
+      <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">expand_more</mat-icon>
+    </span>
+  </a>
+</ng-template>
+
+
+
+

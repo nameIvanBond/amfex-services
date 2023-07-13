@@ -1,0 +1,45 @@
+<div  class="footer disclamerOn" [ngClass]="{ 'disclamerOn': disclamerOn! }">
+  <div class="contentCenter" >
+
+    <div class="footer_box " fxLayout="row wrap" fxLayoutAlign="start start">
+
+      <div class="footer_box_swipe"  (click)="onClick()">
+        <span class="footer_box_swipe_ico"></span>
+        <span class="footer_box_swipe_txt">License & Disclaimer</span>
+      </div>
+
+      <div class="footer_box_item" fxFlex.gt-sm="50" fxFlex="100" fxFlexOrder.gt-sm="1" fxFlexOrder="2">
+        <p class="footer_box_item_txt f_opacity f_left" >© {{currentYear}} Emirates Wealth. All Rights Reserved</p>
+
+      </div>
+
+
+
+      <div class="footer_box_item" fxFlex.gt-sm="50" fxFlex="100" fxFlexOrder.gt-sm="2" fxFlexOrder="1" fxLayout="row wrap" fxLayoutAlign.gt-sm="end start" fxLayoutAlign="start start">
+        <a routerLink="/terms-of-use.html" class="active_terms footer_box_item_link">Terms of Use</a>
+        <a routerLink="/privacy-policy.html" class="active_privacy footer_box_item_link">Privacy Policy</a>
+        <a routerLink="/disclaimer.html" class="active_discl footer_box_item_link">Disclaimer</a>
+      </div>
+
+
+    </div>
+
+    <div class="footer_sep"></div>
+
+    <div class="footer_hide" id="footer_hide">
+      <div class="footer_box" fxLayout="row wrap" fxLayoutAlign="space-between start">
+        <div class="footer_box_item" fxFlex.gt-sm="25" fxFlex="100">
+          <!--<img class="footer_box_item_img" src="/img/main/uae-sca-logo@2x.png" alt="Securities Commodities Authority" > -->
+        </div>
+        <div class="footer_box_item" fxFlex.gt-sm="60" fxFlex="100">
+          <p class="footer_box_item_h">Registration with SCA</p>
+          <p class="footer_box_item_txt" style="opacity:0.5;">Emirates Wealth is licensed and regulated by the Securities & Commodities Authority (SCA), under the license number 603041 to act as a promoter and distributor of Mutual Funds.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+

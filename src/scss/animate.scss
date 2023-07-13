@@ -1,0 +1,245 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes uncoverType1_img {
+  0% {
+    height:0%;
+  }
+
+  100% {
+    height:100%;
+
+  }
+}
+@keyframes uncoverType2_img {
+  0% {
+    width:100%;
+  }
+
+  100% {
+    width:0%;
+
+  }
+}
+@keyframes move_to_right {
+  0% {
+    right:-100%;
+    opacity: 0;
+  }
+
+  100% {
+    right:0%;
+    opacity: 1;
+  }
+}
+
+@keyframes move_to_left {
+  0% {
+    left:-50%;
+
+  }
+
+  100% {
+    left:0;
+
+  }
+}
+
+@keyframes move_to_right {
+  0% {
+    left: 0;
+
+  }
+
+  100% {
+    left: -50%;
+  }
+}
+@include respond_to(tab) {
+  @keyframes move_to_right {
+    0% {
+      left: 0;
+
+    }
+
+    100% {
+      left: -100%;
+    }
+  }
+}
+
+.active_animate,.mat-tab-body.mat-tab-body-active{
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+  .fadeIn{
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+  .fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+
+
+  .uncoverType1_img{
+    animation-name: uncoverType1_img;
+    //animation-iteration-count: 1;
+  }
+  .uncoverType2_img{
+    animation-name: uncoverType2_img;
+  }
+  .move_to_right{
+    animation-name: move_to_right;
+  }
+
+}
+
+.mat-tab-body.mat-tab-body-active   .move_to_left{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: move_to_left;
+  animation-delay:0.2s;
+  /*animation-duration: 0.9s;*/
+  @include respond_to(tab) {
+    animation: none;
+  }
+}
+.mat-tab-body.mat-tab-body-active   .move_to_right{
+  /*animation: fade-out 3.5s;*/
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: move_to_right;
+  @include respond_to(tab) {
+    animation: none;
+  }
+  /*animation-delay:0.1s;*/
+  /*animation-delay:0.2s;*/
+}
+
+
+
+
+
+@for $i from 1 through 30 {
+  @if $i>9{
+    .delay_#{$i} {
+      animation-delay:$i*0.1+s;
+    }
+  }@else{
+    .delay_0#{$i} {
+      animation-delay:$i*0.1+s;
+    }
+  }
+}
+
+
+
+.animate,.animate_b {
+  animation-duration: 0.9s;
+  animation-fill-mode: both;
+  display: block;
+  @include respond_to(tab) {
+    animation: none;
+    display: inline;
+  }
+}
+.animate_b{
+  @include respond_to(tab) {
+    display: block;
+  }
+}
+@for $i from 1 through 30 {
+  @if $i>9{
+    .duration_#{$i} {
+      animation-duration:$i*0.1+s;
+    }
+  }@else{
+    .duration_0#{$i} {
+      animation-duration:$i*0.1+s;
+    }
+  }
+}

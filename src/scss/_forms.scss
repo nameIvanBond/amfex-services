@@ -1,0 +1,24 @@
+
+.auth_form {
+  .mat-form-field-outline,
+  .mat-form-field-label,
+  .mat-focused .mat-form-field-outline,
+  .mat-focused .mat-form-field-label,
+  .mat-focused .mat-form-field-required-marker,
+  .mat-input-element,
+  .mat-form-field-prefix,
+  .mat-input-element{
+   caret-color:white;
+  }
+  mat-icon{
+    cursor:pointer;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-prefix{
+    top:-1px;
+  }
+  .mat-form-field-label-wrapper {
+   /* top: -0.644em;
+    padding-top: 0.84375em;*/
+  }
+}
+

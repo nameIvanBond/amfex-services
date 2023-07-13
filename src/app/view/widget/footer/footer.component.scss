@@ -1,0 +1,162 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+
+.footer{
+  background-color:#0f0f0f;
+  padding:$indent_mob 0;
+  /* height: 35px;
+  overflow: hidden; */
+  /* transition: all 5s ease; */
+  @include respond_to(tab){
+    overflow: hidden;
+  }
+}
+/* #footer.disclamerOn{
+height:auto;
+} */
+.footer_hide {
+  overflow:hidden;
+  height:0;
+  /* transition: all 1s ease; */
+}
+.disclamerOn .footer_hide{
+  height:100%;
+}
+.footer_box{
+  .f_opacity{
+    text-align:left;
+    @include respond_to(tab){
+      opacity:0.5;
+      text-align:center;
+    }
+  }
+  @include respond_to(tab){
+    height:30px;
+  }
+  p,a,span{
+    font-family:'Montserrat', sans-serif;
+  }
+  position:relative;
+  &_item{
+    &_h{
+      font-size:85%;
+      font-weight: 500;
+      color: #ffffff;
+      text-align:right;
+      @include respond_to(tab){
+        text-align:left;
+      }
+    }
+    &_txt{
+      text-align:right;
+      font-size:75%;
+      line-height: 1.5;
+      margin-top:$indent_mob_small;
+      color: rgba(255, 255, 255, 1);
+      @include respond_to(tab){
+        text-align:left;
+      }
+    }
+    &_img{
+      /* margin-top:$indent_mob_small; */
+      width:230px;
+      @include respond_to(tab){
+        margin:$indent_mob_small auto;
+        display:block;
+        margin-top: 0;
+      }
+    }
+    &_link{
+      @include opacity_button();
+      font-size:75%;
+      line-height: 1.5;
+      display:inline-block;
+      color: rgba(255, 255, 255, 1);
+      margin:$indent_mob_small $indent_mob_small 0 $indent_mob_small;
+      @include respond_to(tab){
+        margin:$indent_mob_small 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  &_swipe{
+    display:block;
+    position:absolute;
+    width:130px;
+    margin-left:-50px;
+    left:50%;
+    top:4px;
+    cursor:pointer;
+    /*@include respond_to(pc){
+      display:block;
+      position:absolute;
+      width:130px;
+      margin-left:-50px;
+      left:50%;
+      top:4px;
+      cursor:pointer;
+    }*/
+    @include respond_to(tab){
+      margin:0 auto $indent_mob_small auto;
+      position: relative;
+      left: 0;
+
+    }
+    /* @include respond_to(tab){display:none;} */
+    /* @include respond_to(mob){top:0;position:relative;margin-bottom:10px;} */
+    &_txt{
+      display:block;
+      font-size:75%;
+      text-align:center;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 1);
+    }
+    &_ico{
+      display: block;
+      margin: 0 auto;
+      @include img_opt();
+      @include box_ico('/assets/home/arrow_up.png',18px,8px);
+    }
+    .disclamerOn &_ico{
+      @include box_ico('/assets/home/arrow_down.png',18px,8px);
+    }
+  }
+  /* &_swipe{
+    display:none;
+  } */
+  /*.index_p &_swipe{
+    @include respond_to(pc){
+      display:block;
+    }
+    !* @include respond_to(tab){
+      display:none;
+    } *!
+  }*/
+}
+.disclamerOn .footer_box{
+  @include respond_to(tab){
+    height:auto;
+  }
+}
+.disclamerOn#footer{
+  @include respond_to(tab){
+    overflow: hidden;
+  }
+}
+.footer_sep{
+  display:none;
+  height:1px;
+  opacity:0.1;
+  background-color:#ffffff;
+  margin:$indent_mob 0;
+  @include respond_to(tab){
+    margin:$indent_mob 0;
+    opacity:0.16;
+    height:2px;
+  }
+}
+.disclamerOn  .footer_sep{
+  display:block;
+}

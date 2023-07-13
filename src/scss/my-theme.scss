@@ -1,0 +1,152 @@
+//@import '~@angular/material/theming';
+@use '@angular/material' as mat;
+//@include mat.core();
+
+$palette-primary: (
+  50 : #e5e5e6,
+  100 : #bdbdc0,
+  200 : #929297,
+  300 : #66666d,
+  400 : #45454d,
+  500 : #24242e,
+  600 : #202029,
+  700 : #1b1b23,
+  800 : #16161d,
+  900 : #0d0d12,
+  A100 : #5858ff,
+  A200 : #2525ff,
+  A400 : #0000f1,
+  A700 : #0000d7,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #e5e5e6,
+    400 : #e5e5e6,
+    500 : #e5e5e6,
+    600 : #e5e5e6,
+    700 : #e5e5e6,
+    800 : #e5e5e6,
+    900 : #e5e5e6,
+    A100 : #e5e5e6,
+    A200 : #e5e5e6,
+    A400 : #e5e5e6,
+    A700 : #e5e5e6,
+  )
+);
+$palette-accent: (
+  50 : #ffffff,
+  100 : #c3e8dd,
+  200 : #9bd9c7,
+  300 : #72cab0,
+  400 : #54be9f,
+  500 : #cca776,
+  600 : #30ac86,
+  700 : #29a37b,
+  800 : #229a71,
+  900 : #168b5f,
+  A100 : #c0ffe6,
+  A200 : #8dffd1,
+  A400 : #5affbc,
+  A700 : #41ffb2,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$palette-warn: (
+  50 : #fbeded,
+  100 : #f6d1d1,
+  200 : #f0b3b3,
+  300 : #e99494,
+  400 : #e57d7d,
+  500 : #e06666,
+  600 : #dc5e5e,
+  700 : #d85353,
+  800 : #d34949,
+  900 : #cb3838,
+  A100 : #ffffff,
+  A200 : #ffe2e2,
+  A400 : #ffafaf,
+  A700 : #ff9696,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$my-theme-primary: mat.define-palette($palette-primary);
+$my-theme-accent: mat.define-palette($palette-accent);
+$my-theme-warn: mat.define-palette($palette-warn);
+
+
+$mat-light-theme-background: (
+  status-bar: map_get($my-theme-primary, 300),
+  app-bar:    map_get($my-theme-primary, 100),
+  background: map_get($my-theme-primary, 50),
+  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+  card:       #e5e5e6,
+  dialog:     #e5e5e6,
+  disabled-button: rgba(black, 0.12),
+  raised-button: #e5e5e6,
+  focused-button: #e5e5e6,
+  selected-button: map_get($my-theme-primary, 300),
+  selected-disabled-button: map_get($my-theme-primary, 400),
+  disabled-button-toggle: map_get($my-theme-primary, 200),
+  unselected-chip: map_get($my-theme-primary, 300),
+  disabled-list-option: map_get($my-theme-primary, 200),
+  tooltip: map_get($my-theme-primary, 700),
+);
+
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $my-theme-primary,
+    accent: $my-theme-accent,
+    warn: $my-theme-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+@include mat.all-component-themes($theme);
+//@include mat-tree-theme($theme);
+
+
+/*$background: map-get($my-theme, background);
+$background: map_merge($background, (background: $custom-background-color));
+$my-theme: map_merge($my-theme, (background: $background));*/
+
+//@include angular-material-theme($theme);
+
+@import '../app/core/notification/notifications.scss-theme';
+
+@include notification-theme(mat.$blue-palette, mat.$green-palette, $my-theme-warn, mat.$red-palette);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.

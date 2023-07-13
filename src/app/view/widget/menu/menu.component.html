@@ -1,0 +1,13 @@
+<nav class="desktop_menu" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
+      <span class="desktop_menu_col" *ngFor="let item of navItems" >
+        <span *ngIf="item.children && item.children.length > 0; then thenBlock else elseBlock" ></span>
+          <ng-template #thenBlock >
+            <button mat-button [matMenuTriggerFor]="menu?.childMenu">{{item.displayName}}</button>
+            <app-menu-item #menu [items]="item.children" [parentPath]="item.route" ></app-menu-item>
+          </ng-template>
+          <ng-template #elseBlock>
+            <a mat-button routerLink="{{item.route}}" [fragment]="item.anchor" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >{{item.displayName}}</a>
+          </ng-template>
+      </span>
+</nav>
+

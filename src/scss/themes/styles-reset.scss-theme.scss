@@ -1,0 +1,25 @@
+//@import '~@angular/material/theming';
+@use '@angular/material' as mat;
+@import '../../app/core/notification/notifications.scss-theme';
+
+@include notification-theme(mat.$blue-palette, mat.$green-palette, mat.$red-palette, mat.$red-palette);
+
+@mixin my-styles-reset-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warning: map-get($theme, warn);
+  $foreground: map-get($theme, foreground);
+
+/*  a {
+    color: mat-color($foreground, text);
+
+    &:hover {
+      color: mat-color($accent);
+    }
+  }*/
+
+  code {
+    color: mat.get-color-from-palette($accent, lighter-contrast);
+    background-color: mat.get-color-from-palette($accent, lighter);
+  }
+}

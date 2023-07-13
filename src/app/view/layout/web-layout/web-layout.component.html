@@ -1,0 +1,41 @@
+<mat-sidenav-container fullscreen >
+  <mat-sidenav class="list_mob_menu" #sidenav mode="isMobile.matches ? 'side' : 'push'" role="navigation" position="end">
+
+    <mat-icon class="list_mob_menu_close" (click)="sidenav.toggle()">close</mat-icon>
+    <app-menu-list ></app-menu-list> <!-- (click)="sidenav.toggle()" -->
+
+
+
+<!--    <div class="menu_lang_mob">
+      <a class="menu_lang_mob_link" href="{{localesList.link}}">{{localesList.label}}</a>
+    </div>-->
+  </mat-sidenav>
+
+  <mat-sidenav-content role="main" >
+    <mat-toolbar color="primary" class="header" fxLayout="row wrap" fxLayoutAlign="space-between center">
+
+      <div fxFlex="100" class="active_animate">
+
+        <app-header class="contentCenter header_top animate fadeIn delay_02" fxLayout="row wrap" fxLayoutAlign="space-between center"></app-header>
+        <button class="mob_menu_btn" mat-icon-button (click)="sidenav.toggle()" aria-label="Mobile Menu">
+          <mat-icon class="mob_menu_btn_ico">menu</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+    <main [style.min-height.px]="navService.clientHeight-256">
+
+      <div class="lds" [style.height.px]="navService.clientHeight">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <span class="lds-ring-text">Loading...</span>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+    <app-top-button class="btn_to_top"></app-top-button>
+  </mat-sidenav-content>
+</mat-sidenav-container>

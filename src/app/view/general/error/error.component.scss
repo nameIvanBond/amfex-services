@@ -1,0 +1,19 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+.error404_top {
+
+
+  .contentCenter {
+    @include bg_img("/assets/404.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto;
+    padding: 300px 0 $indent_pc 0;
+    @include respond_to(mob) {
+      height: auto;
+      padding: $indent_pc 0 0 0;
+      background: none;
+    }
+  }
+}

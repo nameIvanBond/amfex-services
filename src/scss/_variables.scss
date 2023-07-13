@@ -1,0 +1,138 @@
+$body_family   : 'Merriweather','Arial';
+$body_size     : 100%;
+$body_line     : 1.5;
+$body_weight   : normal;
+$body_bg_color : #000000;
+/*$body_color 	 : rgba(0, 0, 0,0.87);*/
+
+//==============
+$h_t_indent_pc    : 300px; //head top indent
+$h_t_indent_tab   : 150px; //head top indent
+$indent_big				: 186px;
+$indent_pc				: 110px;
+$indent_tab				: 45px;
+$indent_mid				: 45px;
+$indent_mob				:	35px;
+$indent_mob_small	:	16px;
+
+
+$arr_h			:( h1:450%, h2:230%, h3:190%, h4:125%, h5:90% ); //size on pc
+$arr_h_tab	:( h1:340%, h2:160%, h3:150%, h4:115%, h5:75% ); //resize on tab
+$arr_h_mob	:( h1:240%, h2:140%, h3:120%, h4:105%, h5:75% ); //resize on mobile
+$h_font			: 'Merriweather','Arial';
+$h_color		: #c63636;
+$h_weight		: 800;
+
+//==============
+
+$p_size  : 91%;
+$p_size_mob  : 75%;
+$p_line  : 1.71;
+$p_line_mob  : 1.5;
+$p_color : rgba(0, 0, 0, 0.87);
+$p_align : left;
+$p_weight : 400;
+$p_align_mob : left;
+$p_font : 'Merriweather','Arial'; //
+
+//==============
+
+$a_color : rgba(0, 0, 0, 0.87);
+
+//==============
+
+$media_pc			:87.5625em;  //  1401px
+$media_mid_pc	:79.9375em;	//  1279px resize on laptop
+$media_tab		:59.9375em;		//  959px	resize on tab
+$media_mob		:37.4375em;		//  599px resize on mobile
+
+//==============
+$max_width_big 	: 1650px;
+
+$max_width 			:	1450px;
+$max_width_tab 	:	90%;
+$max_width_b 		: 1376px;
+$max_width_min 	: 860px;
+
+
+//===============
+
+$mob_menu_width : 230px;
+
+
+$mob_sec1: 400px;
+
+
+//========================================================
+//========================================================
+//========================================================
+//========================================================
+//========================================================
+
+input,textarea{
+  font-family:$body_family;
+}
+body{
+  font-family:$body_family;
+  font-size:$body_size;
+  line-height:$body_line;
+  font-weight:$body_weight;
+  /* background-color:$body_bg_color; */
+ /* color:$body_color;*/
+}
+
+p{
+  font-size: $p_size;
+  line-height: $p_line;
+  color:$p_color;
+  text-align:$p_align;
+  font-weight: $p_weight;
+
+  @include respond_to(mob){
+    font-size:$p_size_mob;
+    text-align:$p_align_mob;
+    line-height:$p_line_mob;
+  }
+  font-family:$p_font;
+
+}
+
+html[dir="rtl"]  {
+  p{
+    text-align: right;
+  }
+}
+
+h1,h2,h3,h4,h5{
+  font-family:$h_font;
+  color:$h_color;
+  font-weight: $h_weight;
+  display:block;
+  line-height:1.2;
+  /* opacity:0.87; */
+}
+h1{
+  line-height:1.2;
+}
+
+
+@each $key,$value in $arr_h{
+  #{$key}{font-size:$value; }
+}
+
+
+@each $key,$value in $arr_h_tab{
+  @include respond_to(tab){
+    #{$key}{font-size:$value; }
+  }
+}
+
+@each $key,$value in $arr_h_mob{
+  @include respond_to(mob){
+    #{$key}{font-size:$value; }
+  }
+}
+
+a{
+  color:$a_color;
+}

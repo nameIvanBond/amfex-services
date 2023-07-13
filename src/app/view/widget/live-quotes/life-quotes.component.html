@@ -1,0 +1,17 @@
+<div inViewport (inViewportAction)="updateQuotes($event)" class="infoLine_box theme1" fxLayout="row wrap" fxLayoutAlign="space-between start">
+  <div class="infoLine_box_col" fxFlex="100" fxFlex.gt-sm="25" fxFlex.gt-xs="50" *ngFor="let item of arrayTickers">
+    <div class="infoLine_box_col_indent">
+      <h5 class="infoLine_box_col_h">{{item.instrument}}</h5>
+      <div class="infoLine_box_col_bottom" fxLayout="row wrap" fxLayoutAlign="space-between start">
+        <div class="infoLine_box_col_info" fxFlex="50">
+          <p class="infoLine_box_col_info_h">{{bid}}</p>
+          <p class="infoLine_box_col_info_txt">{{item.bid}}</p>
+        </div>
+        <div class="infoLine_box_col_info" fxFlex="50">
+          <p class="infoLine_box_col_info_h">{{ask}}</p>
+          <p class="infoLine_box_col_info_txt">{{item.ask}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

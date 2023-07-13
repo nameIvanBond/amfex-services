@@ -1,0 +1,14 @@
+<div class="news_box" fxLayout="row wrap" fxLayoutAlign="start start">
+
+  <div class="news_box_col" fxFlex="100" fxFlex.gt-sm="33" fxFlex.gt-xs="47" *ngFor="let item of arrayNews">
+    <div class="news_box_col_indent">
+      <div class="news_box_col_img" [ngStyle]="{'background-image': 'url(https://news.eforex.com/' + item.gallery + ')'}"></div>
+      <h4 class="news_box_col_header">
+        <a routerLink="/forex-news/{{item.url}}.html" class="news_box_col_link" title="{{item.title}}">{{item.title}}</a>
+      </h4>
+      <p class="news_box_col_txt m_t_mob_s">{{item.intro}}</p>
+      <p class="news_box_col_txt2 m_t_mob_s">{{item.publishedDate | date: 'dd-MM-yyyy HH:mm'}}</p>
+      <p class="news_box_col_come">Read News</p>
+    </div>
+  </div>
+</div>

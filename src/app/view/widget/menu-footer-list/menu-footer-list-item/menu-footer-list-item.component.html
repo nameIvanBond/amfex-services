@@ -1,0 +1,11 @@
+<span *ngIf="url.length === 0; then thenBlock else elseBlock" ></span>
+<ng-template #thenBlock >
+  <div [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'cat_name_v2':!item.route}">{{item.displayName}}</div>
+  <span >
+      <app-menu-footer-list-item *ngFor="let child of item.children" [item]="child" [parentPath]="parentPath" [depth]="depth+1"></app-menu-footer-list-item>
+ </span>
+</ng-template>
+<ng-template #elseBlock>
+  <a mat-list-item routerLink="{{item.route}}" [fragment]="item.anchor" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" [ngClass]="{'cat_name':!item.route}">{{item.displayName}}</a>
+</ng-template>
+

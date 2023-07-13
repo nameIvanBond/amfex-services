@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="https://www.w3.org/1999/xhtml"
+        xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+                                https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://emirates-wealth.com/</loc>
+    <changefreq>Always</changefreq>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/registration.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/legal-representation.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/fund-promotion.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/distribution.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/company.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/terms-of-use.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/privacy-policy.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emirates-wealth.com/disclaimer.html</loc>
+    <changefreq>Weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+
+</urlset>

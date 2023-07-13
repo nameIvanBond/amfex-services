@@ -1,0 +1,22 @@
+@use '@angular/material' as mat;
+
+
+$my-dark-primary: mat.define-palette(mat.$grey-palette, 700, 300, 900);
+$my-dark-accent: mat.define-palette(mat.$blue-grey-palette, 400);
+$my-dark-warn: mat.define-palette(mat.$red-palette, 500);
+
+$mat-dark-theme-background: (
+  app-bar: transparent,
+);
+
+$my-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $my-dark-primary,
+    accent: $my-dark-accent,
+    warn: $my-dark-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+body.my-dark-theme app-layout-auth mat-sidenav-content mat-toolbar{position: absolute; color: white;}

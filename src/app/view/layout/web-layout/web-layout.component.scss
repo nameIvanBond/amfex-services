@@ -1,0 +1,140 @@
+
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+
+mat-toolbar .mob_menu_btn{
+  display:none;
+  @include respond_to(tab){
+    display:block;
+    position: absolute;
+    right:4%;
+    top:30px;
+
+  }
+  &_ico{
+    @include md-icon-size(36px);
+    color:white;
+  }
+}
+
+
+/*app-header.header_top{
+  display:block;
+}*/
+
+/* = ======*/
+
+.my-light-theme .mat-toolbar.mat-primary{
+  background:none;
+}
+.mat-drawer-content .mat-toolbar-single-row{
+  height: auto;
+ padding:0;
+}
+
+
+body .list_mob_menu {
+  .btn{
+    @include respond_to(tab) {
+      text-align: left;
+      padding:20px 15px;
+    }
+  }
+  .desktop_menu {
+    @include respond_to(tab) {
+      display: block;
+    }
+
+    &_col {
+      @include respond_to(tab) {
+        display: block;
+        min-width: 150px;
+      }
+
+      .mat-button {
+        @include respond_to(tab) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &_close{
+    @include md-icon-size(36px);
+    display: block;
+    cursor:pointer;
+    margin: $indent_mob auto;
+  }
+  .header_top_acc{
+    @include respond_to(tab) {
+      display: block;
+      margin-left:0;
+    }
+  }
+}
+
+
+/* ========================================== */
+/* ========================================== */
+/* ========================================== */
+/* ========================================== */
+
+
+body .btn_to_top {
+  position: fixed;
+  right: -80px;
+  bottom: 100px;
+  z-index: 200;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  @include respond_to(tab) {
+    bottom: 30px;
+  }
+  .mat-icon{
+    color:white;
+  }
+}
+body .btn_to_top:hover{
+  -webkit-box-shadow: 0 0 17 -3px rgba(255,255,255,0.45);
+  box-shadow: 0 0 17px -3px rgba(255,255,255,0.45);
+}
+body .btn_to_top.inactive {
+  right: 80px;
+  @include respond_to(tab) {
+    right: 3%;
+  }
+
+}
+
+
+.cookie_box{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding: $indent_mob_small 0;
+  background: #1c1a1b;
+  border-top: 1px solid #000000;
+  opacity: 0.95;
+  z-index: 100;
+  &_txt{
+    font-size: 14px;
+  }
+  &_link{
+    color:#00a1ff;
+    text-decoration: underline;
+  }
+  &_btn{
+    @include respond_to(mob) {
+      margin-top: $indent_mob;
+    }
+  }
+  .btn {
+   font-size: 14px;
+  }
+}
+
+.popUpLimited{
+  max-width: 500px;
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+.desktop_menu{
+  display:block;
+  @include respond_to(tab){
+    display:none;
+  }
+  /*& &_col:last-child{
+    display:none;
+  }*/
+/*  & &_col:nth-child(6),
+  & &_col:nth-child(7){
+    display:none;
+  }*/
+}
+.desktop_menu .mat-focus-indicator:hover{
+  opacity:0.7;
+}
+
