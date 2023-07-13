@@ -1,5 +1,5 @@
 import {Inject, Injectable, Optional, PLATFORM_ID} from '@angular/core';
-import {makeStateKey, StateKey, TransferState} from '@angular/platform-browser';
+import {makeStateKey, StateKey, TransferState} from '@angular/core'
 import {isPlatformServer} from '@angular/common';
 import {SERVER_PROFILE} from '@core/state-transfer-factory';
 
