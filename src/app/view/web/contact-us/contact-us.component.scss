@@ -1,0 +1,49 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+
+.contact_sec1{
+  &_box{
+
+    &_col{
+      margin-top: $indent_pc;
+      @include respond_to(tab) {
+        margin-top: $indent_tab;
+      }
+      padding: 32px;
+      border-radius: 16px;
+      border: solid 4px #1156f9;
+      &_t1{
+        opacity: 0.5;
+        margin-right: 32px;
+        @include respond_to(tab) {
+          margin-right: 5px;
+        }
+      }
+
+    }
+  }
+}
+
+.contact_sec2{
+  margin-top: $indent_pc;
+  @include respond_to(tab) {
+    margin-top: $indent_tab;
+  }
+  .contentCenter{
+    box-sizing: border-box;
+    padding: 71px;
+    border-radius: 40px;
+    background-color: #1156f9;
+    @include respond_to(tab) {
+      padding: $indent_mob 3%;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  &_h{
+    color:white;
+    text-align: center;
+  }
+}
+

@@ -17,29 +17,25 @@ import {map} from 'rxjs/operators';
       <div *ngSwitchDefault>
         <form class="" [formGroup]="FeedBackGroup" #userFeedbackForm="ngForm" (ngSubmit)="onSubmit()">
           <div fxLayout="row wrap" fxLayoutAlign="space-between start">
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="48">
+            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
               <mat-label >Name</mat-label>
               <input type="text" matInput formControlName="name" required>
               <mat-error *ngIf="key.name.invalid">{{getErrorName()}}</mat-error>
             </mat-form-field>
 
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="48">
-              <mat-label >Company</mat-label>
-              <input type="text" matInput formControlName="company" >
-              <mat-error *ngIf="key.company.invalid">{{getErrorCompany()}}</mat-error>
+            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
+              <mat-label >Email</mat-label>
+              <input type="text" matInput formControlName="email" required>
+              <mat-error *ngIf="key.email.invalid">{{getErrorEmail()}}</mat-error>
             </mat-form-field>
 
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="48">
-              <mat-label >Enter your Phone</mat-label>
+            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
+              <mat-label >Phone</mat-label>
               <input type="text" matInput formControlName="phone" >
               <mat-error *ngIf="key.phone.invalid">{{getErrorPhone()}}</mat-error>
             </mat-form-field>
 
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="48">
-              <mat-label >Enter your Email</mat-label>
-              <input type="text" matInput formControlName="email" required>
-              <mat-error *ngIf="key.email.invalid">{{getErrorEmail()}}</mat-error>
-            </mat-form-field>
+
 
 
 
@@ -49,7 +45,7 @@ import {map} from 'rxjs/operators';
               <mat-error *ngIf="key.message.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
             <div fxLayout="row wrap" fxLayoutAlign="end start" fxFlex="100">
-              <button [disabled]="loader.loading" class="btn btn_mob btn_orange" >SUBMIT FORM</button>
+              <button [disabled]="loader.loading" class="btn btn_mob btn_blue" >SUBMIT FORM</button>
             </div>
           </div>
         </form>
@@ -108,13 +104,7 @@ export class FeedbackFormComponent {
           Validators.maxLength(300)
         ]
       ],
-//$localize
-      company: ['',
-        [
-          Validators.minLength(2),
-          Validators.maxLength(150)
-        ]
-      ],
+
       phone: ['', [
         Validators.pattern(/^[0-9+-\\s]{5,22}$/)
       ]],
@@ -137,18 +127,7 @@ export class FeedbackFormComponent {
   }
 
 
-  getErrorCompany() {
-    if (this.key.company.errors.required) {
-      return 'You must enter a value';
-    }
-    if (this.key.company.errors.minlength) {
-      return 'This field can be more 2 characters long.';
-    }
-    if (this.key.company.errors.maxlength) {
-      return 'This field can be at most 150 characters long.';
-    }
-    if (this.key.company.errors.serverError) {return this.key.company.errors.serverError; }
-  }
+
 
   getErrorMessage() {
     if (this.key.message.errors.required) {
@@ -198,7 +177,6 @@ export class FeedbackFormComponent {
       /*services: this.key.services.value,*/
       email: this.key.email.value,
       phone: this.key.phone.value,
-      company: this.key.company.value,
       message: this.key.message.value,
       formtype: 'Home Page - Contact Form'
     };

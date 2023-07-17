@@ -2,5 +2,60 @@
 @import "src/scss/variables";
 
 
+.index_sec1{
+  &_desc{
+    margin-top: $indent_pc;
+    padding: 32px;
+    @include respond_to(tab) {
+      margin-top: $indent_tab;
+      padding: 0;
+    }
+    &_h{
+      color:#1156f9;
+      @include respond_to(tab) {
+        margin-bottom: $indent_mob;
+      }
+    }
+    &_txt{
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}
+.index_sec2{
+  margin-top: $indent_pc;
+  background-color: #f4f4f4;
+  padding: $indent_tab 0;
+  @include respond_to(tab) {
+    margin-top: $indent_tab;
+  }
+}
+.index_sec3{
+  margin-top: $indent_pc;
+  @include respond_to(tab) {
+    margin-top: $indent_tab;
+  }
+  &_box{
+    margin-top: $indent_tab;
+    @include respond_to(tab) {
+      margin-top: $indent_mob;
+    }
+    &_col{
+      padding: 32px;
+      border-radius: 40px;
+      border: solid 4px #1156f9;
+      margin-bottom: $indent_mob;
+    }
+    & &_col:nth-child(5n),
+    & &_col:nth-child(6n){
+      margin-bottom: 0;
+    }
+    & &_col:nth-child(5n){
+      @include respond_to(tab) {
+        margin-bottom: $indent_mob;
+      }
+    }
+  }
+}
 
 

@@ -1,0 +1,12 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+.about_sec1{
+  &_box{
+    margin-top: $indent_pc;
+    @include respond_to(tab) {
+      margin-top: $indent_tab;
+    }
+
+  }
+}

@@ -1,0 +1,13 @@
+@import "src/scss/mixin";
+@import "src/scss/variables";
+
+
+.team_sec1{
+  .blue_rec{
+    margin-top: $indent_pc;
+    @include respond_to(tab) {
+      margin-top: $indent_tab;
+
+    }
+  }
+}

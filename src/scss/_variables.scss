@@ -1,4 +1,4 @@
-$body_family   : 'Merriweather','Arial';
+$body_family   : 'Poppins','Arial';
 $body_size     : 100%;
 $body_line     : 1.5;
 $body_weight   : normal;
@@ -9,31 +9,31 @@ $body_bg_color : #000000;
 $h_t_indent_pc    : 300px; //head top indent
 $h_t_indent_tab   : 150px; //head top indent
 $indent_big				: 186px;
-$indent_pc				: 110px;
-$indent_tab				: 45px;
-$indent_mid				: 45px;
-$indent_mob				:	35px;
+$indent_pc				: 128px;
+$indent_tab				: 64px;
+$indent_mid				: 41px;
+$indent_mob				:	24px;
 $indent_mob_small	:	16px;
 
 
-$arr_h			:( h1:450%, h2:230%, h3:190%, h4:125%, h5:90% ); //size on pc
-$arr_h_tab	:( h1:340%, h2:160%, h3:150%, h4:115%, h5:75% ); //resize on tab
-$arr_h_mob	:( h1:240%, h2:140%, h3:120%, h4:105%, h5:75% ); //resize on mobile
-$h_font			: 'Merriweather','Arial';
-$h_color		: #c63636;
+$arr_h			:( h1:64px, h2:36px, h3:24px, h4:125%, h5:90% ); //size on pc
+$arr_h_tab	:( h1:50px, h2:30px, h3:20px, h4:115%, h5:75% ); //resize on tab
+$arr_h_mob	:( h1:40px, h2:25px, h3:18px, h4:105%, h5:75% ); //resize on mobile
+$h_font			: 'Poppins','Arial';
+$h_color		: #000000;
 $h_weight		: 800;
 
 //==============
 
-$p_size  : 91%;
-$p_size_mob  : 75%;
-$p_line  : 1.71;
+$p_size  : 20px;
+$p_size_mob  : 16px;
+$p_line  : 1.5;
 $p_line_mob  : 1.5;
 $p_color : rgba(0, 0, 0, 0.87);
 $p_align : left;
 $p_weight : 400;
 $p_align_mob : left;
-$p_font : 'Merriweather','Arial'; //
+$p_font : 'Poppins','Arial'; //
 
 //==============
 
@@ -49,7 +49,7 @@ $media_mob		:37.4375em;		//  599px resize on mobile
 //==============
 $max_width_big 	: 1650px;
 
-$max_width 			:	1450px;
+$max_width 			:	1156px;
 $max_width_tab 	:	90%;
 $max_width_b 		: 1376px;
 $max_width_min 	: 860px;
@@ -133,6 +133,6 @@ h1{
   }
 }
 
-a{
+/*a{
   color:$a_color;
-}
+}*/

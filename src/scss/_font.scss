@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'Montserrat';
-  src:	url('/assets/fonts/Montserrat/regular/Montserrat-Regular.woff2') format('woff2'),
-  url('/assets/fonts/Montserrat/regular/Montserrat-Regular.woff') format('woff');
+  font-family: 'Inter';
+  src:	url('/assets/fonts/Inter/regular/Inter-Regular.woff2') format('woff2'),
+  url('/assets/fonts/Inter/regular/Inter-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src:	url('/assets/fonts/Montserrat/medium/Montserrat-Medium.woff2') format('woff2'),
-  url('/assets/fonts/Montserrat/medium/Montserrat-Medium.woff') format('woff');
+  font-family: 'Inter';
+  src:	url('/assets/fonts/Inter/medium/Inter-Medium.woff2') format('woff2'),
+  url('/assets/fonts/Inter/medium/Inter-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: fallback;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src:	url('/assets/fonts/Montserrat/semiBold/Montserrat-SemiBold.woff2') format('woff2'),
-  url('/assets/fonts/Montserrat/semiBold/Montserrat-SemiBold.woff') format('woff');
-  font-weight: 600;
+  font-family: 'Inter';
+  src:	url('/assets/fonts/Inter/bold/Inter-Bold.woff2') format('woff2'),
+  url('/assets/fonts/Inter/bold/Inter-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: fallback;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -31,40 +31,40 @@
 
 
 @font-face {
-  font-family: 'Merriweather';
-  src:	url('/assets/fonts/Merriweather/light/Merriweather-Light.woff2') format('woff2'),
-  url('/assets/fonts/Merriweather/light/Merriweather-Light.woff') format('woff');
-  font-weight: 100;
+  font-family: 'Poppins';
+  src:	url('/assets/fonts/Poppins/regular/Poppins-Regular.woff2') format('woff2'),
+  url('/assets/fonts/Poppins/regular/Poppins-Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: fallback;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 
 }
 @font-face {
-  font-family: 'Merriweather';
-  src:	url('/assets/fonts/Merriweather/regular/Merriweather-Regular.woff2') format('woff2'),
-  url('/assets/fonts/Merriweather/regular/Merriweather-Regular.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Poppins';
+  src:	url('/assets/fonts/Poppins/medium/Poppins-Medium.woff2') format('woff2'),
+  url('/assets/fonts/Poppins/medium/Poppins-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
   font-display: fallback;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 
 }
 @font-face {
-  font-family: 'Merriweather';
-  src:	url('/assets/fonts/Merriweather/bold/Merriweather-Bold.woff2') format('woff2'),
-  url('/assets/fonts/Merriweather/bold/Merriweather-Bold.woff') format('woff');
+  font-family: 'Poppins';
+  src:	url('/assets/fonts/Poppins/bold/Poppins-Bold.woff2') format('woff2'),
+  url('/assets/fonts/Poppins/bold/Poppins-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
+}
+@font-face {
+  font-family: 'Poppins';
+  src:	url('/assets/fonts/Poppins/extraBold/Poppins-ExtraBold.woff2') format('woff2'),
+  url('/assets/fonts/Poppins/extraBold/Poppins-ExtraBold.woff') format('woff');
   font-weight: 800;
-  font-style: normal;
-  font-display: fallback;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-
-}
-@font-face {
-  font-family: 'Merriweather';
-  src:	url('/assets/fonts/Merriweather/black/Merriweather-Black.woff2') format('woff2'),
-  url('/assets/fonts/Merriweather/black/Merriweather-Black.woff') format('woff');
-  font-weight: 900;
   font-style: normal;
   font-display: fallback;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
