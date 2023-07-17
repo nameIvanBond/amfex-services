@@ -10,7 +10,7 @@ export const environment = {
   hosts: {
     'amfexservices.com': {
       mailTo: 'admin',
-      apiUrl: 'https://api.amfexservices.com',
+      apiUrl: 'https://web.amfexservices.com',
       pcUrl: ''
     },
     default: {
