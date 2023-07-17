@@ -12,7 +12,7 @@ import {map} from 'rxjs/operators';
   template: `
     <container-element [ngSwitch]="formState">
       <div class="animate-switch" *ngSwitchCase="'success'">
-        <p style="text-align:center;">Thank you, your message has been sent.</p>
+        <p class="form_done">Thank you, your message has been sent.</p>
       </div>
       <div *ngSwitchDefault>
         <form class="" [formGroup]="FeedBackGroup" #userFeedbackForm="ngForm" (ngSubmit)="onSubmit()">

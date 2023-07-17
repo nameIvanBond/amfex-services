@@ -422,8 +422,14 @@ html body .btn:hover{
   max-width:770px;
   width:100%;
 }
+.form_done{
+  margin-top:$indent_mob;
+}
 
-
+.white_form .form_done{
+ color:white;
+  opacity: 0.8;
+}
 
 
 
