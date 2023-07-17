@@ -17,19 +17,19 @@ import {map} from 'rxjs/operators';
       <div *ngSwitchDefault>
         <form class="" [formGroup]="FeedBackGroup" #userFeedbackForm="ngForm" (ngSubmit)="onSubmit()">
           <div fxLayout="row wrap" fxLayoutAlign="space-between start">
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
+            <mat-form-field class="m_t_mob" appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
               <mat-label >Name</mat-label>
               <input type="text" matInput formControlName="name" required>
               <mat-error *ngIf="key.name.invalid">{{getErrorName()}}</mat-error>
             </mat-form-field>
 
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
+            <mat-form-field class="m_t_mob" appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
               <mat-label >Email</mat-label>
               <input type="text" matInput formControlName="email" required>
               <mat-error *ngIf="key.email.invalid">{{getErrorEmail()}}</mat-error>
             </mat-form-field>
 
-            <mat-form-field appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
+            <mat-form-field class="m_t_mob" appearance="outline" fxFlex="100" fxFlex.gt-sm="30">
               <mat-label >Phone</mat-label>
               <input type="text" matInput formControlName="phone" >
               <mat-error *ngIf="key.phone.invalid">{{getErrorPhone()}}</mat-error>
@@ -39,7 +39,7 @@ import {map} from 'rxjs/operators';
 
 
 
-            <mat-form-field appearance="outline" fxFlex="100">
+            <mat-form-field class="m_t_mob" appearance="outline" fxFlex="100">
               <mat-label >Your Comment</mat-label>
               <textarea matInput rows="8" formControlName="message" required></textarea>
               <mat-error *ngIf="key.message.invalid">{{getErrorMessage()}}</mat-error>
@@ -147,7 +147,7 @@ export class FeedbackFormComponent {
       return 'An Email is required.';
     }
     if (this.key.email.errors.email) {
-      return 'Please enter a valid email address.';
+      return 'Please enter a valid email.';
     }
     if (this.key.email.errors.maxlength) {
       return 'This field can be at most 150 characters long.';

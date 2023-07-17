@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NavService} from '@core/nav.service';
-import { ViewportScroller } from '@angular/common';
+
 
 @Component({
   selector: 'app-footer',
@@ -9,20 +9,12 @@ import { ViewportScroller } from '@angular/common';
 })
 export class FooterComponent implements OnInit {
 
-  disclamerOn = false;
-  constructor(public nav: NavService,private viewportScroller: ViewportScroller) {}
+
+  constructor(public nav: NavService) {}
 
   currentYear: number = new Date().getFullYear();
 
-  public onClick(): void {
-    this.nav.scrollToElementById('footer_hide');
-    if(!this.disclamerOn){
-      this.disclamerOn = true;
 
-    }else{
-      this.disclamerOn = false;
-    }
-  }
 
   ngOnInit() {
   }

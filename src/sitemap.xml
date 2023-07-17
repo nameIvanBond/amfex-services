@@ -5,50 +5,26 @@
         xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
                                 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://emirates-wealth.com/</loc>
+    <loc>https://amfexservices.com/</loc>
     <changefreq>Always</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://emirates-wealth.com/registration.html</loc>
+    <loc>https://amfexservices.com/about-us.html</loc>
     <changefreq>Weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://emirates-wealth.com/legal-representation.html</loc>
+    <loc>https://amfexservices.com/our-team.html</loc>
     <changefreq>Weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://emirates-wealth.com/fund-promotion.html</loc>
+    <loc>https://amfexservices.com/contact-us.html</loc>
     <changefreq>Weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://emirates-wealth.com/distribution.html</loc>
-    <changefreq>Weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://emirates-wealth.com/company.html</loc>
-    <changefreq>Weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://emirates-wealth.com/terms-of-use.html</loc>
-    <changefreq>Weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://emirates-wealth.com/privacy-policy.html</loc>
-    <changefreq>Weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://emirates-wealth.com/disclaimer.html</loc>
-    <changefreq>Weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
 
 
 </urlset>

@@ -154,6 +154,7 @@ html body.my-light-theme {
     .btn_blue{
       background: white;
       color:#1156f9;
+      border-color: white;
     }
     .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
       color: #f4f4f4;
@@ -417,6 +418,10 @@ html body .btn:hover{
   max-width:570px;
   width:100%;
 }
+.m_width770{
+  max-width:770px;
+  width:100%;
+}
 
 
 
@@ -512,10 +517,15 @@ html body .mat-toolbar.header{
   margin-top: $indent_big;
   @include respond_to(tab) {
     margin-top: $indent_pc;
+    border-radius: 0;
   }
+
   html body &_h{
     color:white;
     margin-left:$indent_tab;
+    @include respond_to(tab) {
+      margin-left:3%;
+    }
   }
   &.home{
     @include bg_img("/assets/top_bg/home.webp");
@@ -557,7 +567,7 @@ html body .mat-toolbar.header{
 
 .contact_sec{
   margin-top: $indent_pc;
-  padding-top: $indent_tab;
+  padding-top: $indent_mob;
   box-sizing: border-box;
   height:578px;
   @include bg_img("/assets/contact-us/ContactsBg.webp");

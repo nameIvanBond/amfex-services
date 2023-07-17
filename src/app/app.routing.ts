@@ -19,9 +19,9 @@ const AppRoutes: Routes = [
     path: '',
     component: WebLayoutComponent,
     data: {
-      menu: 'Emirates Wealth',
-      title: 'Emirates Wealth',
-      description: 'Emirates Wealth',
+      menu: 'AMFEX Services',
+      title: 'AMFEX Services',
+      description: 'AMFEX Services',
     },
     children: [
       {
@@ -29,8 +29,8 @@ const AppRoutes: Routes = [
         component: HomeComponent,
         data: {
           menu: 'Home',
-          title: 'Emirates Wealth – Mutual Funds, Promotion and Distribution Center',
-          description: 'Emirates Wealth is your gateway to retail and qualified investors in the UAE, GCC, MEASA regions and to the global markets.',
+          title: 'AMFEX Services LLP - consultancy firm specializing in sourcing and procurement solutions for raw materials in India | amfexservices.com',
+          description: 'AMFEX Services caters foreign companies seeking reliable sourcing options to meet their raw material requirements in Automotive, Energy, Construction, Electrical, Consumer Goods, Textile, Healthcare and other industries.',
         }
       },
       {
@@ -38,7 +38,7 @@ const AppRoutes: Routes = [
         component: AboutUsComponent, pathMatch: 'full',
         data: {
           menu: 'About Us',
-          title: 'About Us –',
+          title: 'About Us – AMFEX Services LLP | amfexservices.com',
           description: 'About Us',
         }
       },
@@ -47,7 +47,7 @@ const AppRoutes: Routes = [
         component: OurTeamComponent, pathMatch: 'full',
         data: {
           menu: 'Our Team',
-          title: 'Our Team – ',
+          title: 'Our Team – AMFEX Services LLP | amfexservices.com',
           description: 'Our Team',
         }
       }, {
@@ -55,7 +55,7 @@ const AppRoutes: Routes = [
         component: ContactUsComponent, pathMatch: 'full',
         data: {
           menu: 'Contact Us',
-          title: 'Contact Us – ',
+          title: 'Contact Us – AMFEX Services LLP | amfexservices.com',
           description: 'Contact Us',
         }
       },

@@ -12,9 +12,9 @@ export const environment = {
     password: ''
   },
   hosts: {
-    'emirates-wealth.com': {
+    'amfexservices.com': {
       mailTo: 'admin',
-      apiUrl: 'https://api.emirates-wealth.com',
+      apiUrl: 'https://api.amfexservices.com',
       pcUrl: ''
     },
     default: {
